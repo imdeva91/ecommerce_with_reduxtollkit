@@ -1,8 +1,10 @@
 import React from 'react'
 import { RxCross1 } from 'react-icons/rx'
+import { useDispatch } from 'react-redux'
 import { removeFromCart } from '../redux/features/cartSlice'
 
 const CartProduct = ({image,title,price,quantity,id}) => {
+    const dispatch = useDispatch()
 
     const removeItem =(id)=>{
         dispatch(removeFromCart(id))
